@@ -1,5 +1,5 @@
 
-.include "/home/kalyan/kalyan1/m328Pdef.inc"
+.include "/home/kalyan/asm/m328Pdef.inc"
 Start:
 
 ldi r30, 0b00111100 ;identifying output pins 2,3,4,5

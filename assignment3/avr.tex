@@ -1,0 +1,123 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{watermark}
+\usepackage{array}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\thiswatermark{\centering
+\put(330,-150){\includegraphics[scale=02]{{iit h}.png}}}
+\title{P.O.S Canonical Form For Truth Table}
+\author{Kalyan}
+
+\begin{document}
+\maketitle
+\begin{multicols}{2}
+\tableofcontents
+
+\begin{abstract}
+ This manual shows how to use Arduino with 7447 and sevensegment dispaly to represent pos canonical form for function 'F' in truth table.
+   \vspace{5mm}
+
+\subsection{Truth table}
+\begin{tabularx}{0.4\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+X & Y & Z & F \\
+\hline
+0 & 0 & 0 & 1 \\  
+\hline
+0 & 0 & 1 & 0 \\ 
+\hline
+0 & 1 & 0 & 0 \\
+\hline
+0 & 1 & 1 & 1 \\
+\hline
+1 & 0 & 0 & 1 \\  
+\hline
+1 & 0 & 1 & 0 \\ 
+\hline
+1 & 1 & 0 & 0 \\
+\hline
+1 & 1 & 1 & 1 \\
+\hline
+\end{tabularx}
+\end{abstract}
+\section{Components}
+
+%\begin{table}[]
+    \centering
+    \begin{tabular}{ |c |c |c |c |}
+\hline
+\textbf{Components} & \textbf{Value} & \textbf{Quantity} \\
+\hline
+ Resistor & 220Ohm & 1 \\ 
+ Arduino & UNO & 1 \\  
+  led &- & 1 \\
+  Jumper wires &M-M &6\\
+ Breadboard &- &1\\
+ \hline
+ \end{tabular}
+ \vspace{3mm}
+ 
+ %\caption{Table 1.0}
+    \label{table1}
+%\end{table}
+
+\section{Hardware}
+
+%\begin{figure}
+ %    \centering
+ %    \includegraphics{7447_pin.png}
+  %   \includegraphics{7-Segment-Display-Pinout.jpg}
+%\caption{7447 pin diagram}
+ %    \label{fig:7447}
+  %   \textbf{Problem 2.2}  Make connections to the lower pins of
+%the 7447 according to Table 2.2 and connect VCC =
+%5V. 
+%\hfill
+%\vspace{10mm}
+%\includegraphics{7-Segment-Display-Pinout.jpg}
+  %   \includegraphics{7-Segment-Display-Pinout.jpg}
+%\caption{seven segment diagram}
+ %    \label{fig:seven}
+\textbf{Problem 2.1.} Now make the connections as per
+code link 
+
+
+
+\section{Software}
+execute the following program after
+downloading.
+\framebox{
+\url{https://github.com/anirudhkalyan/fwc.git}}
+\vspace{10mm}
+
+X,Y,Z are the inputs that we are assigning manually in bread board and by deriving canonical form for F,
+\begin{equation}
+F=(X+Y+!Z)*(X+!Y+Z)*(!X+Y+!Z)*(!X+!Y+Z)
+\end{equation}
+%F= (X || Y ||!Z) && (X ||!Y||Z)&&(!X+Y+!Z)&&(!X||!Y||Z) 
+\section{conclusion}
+open in text editor ,and type the code save
+change the target address in makefile
+and execute by typing make in terminal
+
+\end{multicols}{2}
+\end{document}
